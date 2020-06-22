@@ -1,0 +1,187 @@
+/* global */
+:root {
+  --color-primary: red;
+  --color-white: white;
+  --color-dark: #222;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-white);
+  background-color: black;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1080px;
+  margin: auto;
+  background-color: black;
+  color: var(--color-white);
+}
+
+.jumbotron {
+  background: url("../imgs/jumbotron.jpg") no-repeat center / cover;
+  height: 500px;
+  position: relative;
+}
+
+.jumbotron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.jumbotron .navbar {
+  position: relative;
+  height: 80px;
+  z-index: 2;
+}
+
+.jumbotron .navbar .navbar-left {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.jumbotron .navbar .navbar-left img {
+  width: 140px;
+}
+
+.jumbotron .navbar .navbar-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.jumbotron .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  z-index: 2;
+}
+.jumbotron .content h1 {
+  width: 60%;
+  text-align: center;
+
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.jumbotron .content h3 {
+  margin-top: 10px;
+}
+
+.jumbotron .content .try-free {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron .content .try-free input {
+  flex: 3;
+}
+.jumbotron .content .try-free button {
+  flex: 2;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.jumbotron .content .try-free input,
+.jumbotron .content .try-free button {
+  height: 50px;
+  box-sizing: border-box;
+  margin: 0 1px;
+  border: none;
+}
+
+.jumbotron .content .try-free button i {
+  margin-left: 20px;
+}
+.jumbotron .content p {
+  font-size: 1.2rem;
+}
+
+/* show case*/
+
+.show-case .show-case1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer */
+
+.call {
+  margin-top: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links ul li {
+  padding: 5px 0;
+}
+/* util */
+
+.btn {
+  padding: 8px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.thick-hr {
+  width: 100%;
+  height: 0.4rem;
+  background-color: var(--color-dark);
+}
+
+/* media*/
+@media (max-width: 1080px) {
+  .container {
+    width: 90%;
+  }
+}
